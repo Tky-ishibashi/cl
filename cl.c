@@ -1,3 +1,6 @@
+/*
+calculator program
+ */
 #include <stdio.h>
 #include "cl_cal.h"
 
