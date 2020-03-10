@@ -1,0 +1,19 @@
+#
+#target: source
+#<tab>command
+#<tab>command
+#
+PROG=	cl
+OBJS=	cl.o cl_cal.o
+
+.SUFFIXES:
+.SUFFIXES: .c .o
+
+.c.o:
+	cc -c -o ${.TARGET} ${.IMPSRC}
+
+cl.o: cl_cal.h	#.hのファイルを依存関係を定義
+cl_cal.o: cl_cal.h
+
+${PROG}: ${OBJS}
+	cc    -o ${.TARGET} ${.ALLSRC}

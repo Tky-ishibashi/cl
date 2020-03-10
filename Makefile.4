@@ -1,0 +1,16 @@
+#
+#target: source
+#<tab>command
+#<tab>command
+#
+PROG=	cl
+OBJS=	cl.o cl_cal.o
+
+.SUFFIXES:
+.SUFFIXES: .c .o
+
+.c.o:
+	cc -c -o ${.TARGET} ${.IMPSRC}
+
+${PROG}: ${OBJS}
+	cc    -o ${.TARGET} ${.ALLSRC}

@@ -1,0 +1,13 @@
+#
+#target: source
+#<tab>command
+#<tab>command
+#
+.SUFFIXES:
+.SUFFIXES: .c .o
+
+.c.o:
+	cc -c -o ${.TARGET} ${.IMPSRC}
+
+cl: cl.o cl_cal.o
+	cc    -o ${.TARGET} ${.ALLSRC}

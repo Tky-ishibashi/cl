@@ -1,0 +1,11 @@
+#
+#target: source
+#<tab>command
+#<tab>command
+#
+cl.o: cl.c
+	cc -c -o ${.TARGET} ${.ALLSRC}
+cl_cal.o: cl_cal.c
+	cc -c -o ${.TARGET} ${.ALLSRC}
+cl: cl.o cl_cal.o
+	cc    -o ${.TARGET} ${.ALLSRC}

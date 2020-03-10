@@ -1,0 +1,11 @@
+#
+#target: source
+#<tab>command
+#<tab>command
+#
+cl.o: cl.c
+	cc -c -o cl.o cl.c
+cl_cal.o: cl_cal.c
+	cc -c -o cl_cal.o cl_cal.c
+cl: cl.o cl_cal.o
+	cc    -o cl cl.o cl_cal.o
