@@ -27,4 +27,4 @@ install:
 	cp ${PROG} /usr/local/bin/
 
 test:
-	./${PROG} 1 2 3 4 x + /
+	./${PROG} 4 2 / 3 + 5 x 6 -
