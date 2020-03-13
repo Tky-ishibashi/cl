@@ -9,8 +9,12 @@ int main(int argc, char* argv[]){
   for(i=1;i<argc;i++){
     printf("%s\n",argv[i]);
   }  */
-  int result;
-  result = cal(argc,argv);
+  int result,*error;
+  result = cal(argc,argv,error);
+  if(*error==0){
   printf("%d\n", result);
+  } else if(*error==1){
+    printf("ERROR\n");
+  }
   return (0);
 }
