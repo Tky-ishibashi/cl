@@ -1,1 +1,1 @@
-int cal(int, char *[], int*);
+long cal(int, char *[], int*);
